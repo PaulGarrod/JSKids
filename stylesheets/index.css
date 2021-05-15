@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    height: 350px;  
+    background-image: url(../img/sigmundKidsPlay.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: inherit;
+  }
+
+.header-title {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: darkblue;
+    margin: 0 auto;
+    padding: 5px 50px;
+    border-radius: 3px;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    margin: 0;
+    background-color: lightcoral;
+}
+
+.navbar-sticky-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+    "sidebar"
+    "main-content";
+    margin: 25px;
+}
+
+.aside-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    grid-area: sidebar;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.link-item {
+    text-align: center;
+    width: 100px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid red;
+}
+
+.main-content {
+    grid-area: main-content;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+footer {
+    grid-row: 2;
+    background-color: darkgoldenrod;
+}
+
+footer a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 600px) {
+    .main-container { 
+        display: flex;
+    }
+    .aside-content {
+        display: none;
+    }
+}
